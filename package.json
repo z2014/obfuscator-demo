@@ -1,0 +1,27 @@
+{
+  "name": "obfuscator-demo",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "rm -rf dist && webpack --config webpack.config.js",
+    "terser:js": "npx terser --compress --mangle -- test/test.js",
+    "terser:ts": "npx terser --compress --mangle -- test/ts.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/z2014/obfuscator-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/z2014/obfuscator-demo/issues"
+  },
+  "homepage": "https://github.com/z2014/obfuscator-demo#readme",
+  "dependencies": {
+    "terser-webpack-plugin": "^5.2.4",
+    "ts-loader": "^9.2.6",
+    "webpack": "^5.54.0",
+    "webpack-cli": "^4.8.0"
+  }
+}
