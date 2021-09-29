@@ -1,3 +1,4 @@
+import { clone } from './utils';
 export class Dynamic {
     public name = 'Dynamic';
     private desc = 'this is Dynamic';
@@ -7,6 +8,10 @@ export class Dynamic {
     }
 
     private output() {
-        console.log(this.desc);
+        const test = {
+            desc: this.desc,
+        };
+        const params = clone(test);
+        console.log(params);
     }
 }

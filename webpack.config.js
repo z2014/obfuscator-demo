@@ -17,11 +17,11 @@ module.exports = {
   optimization: {
     chunkIds: 'named',
     minimize: true,
-    minimizer: [new TerserPlugin({
-      terserOptions: {
-        compress: true,
-      },
-    })],
+    // minimizer: [new TerserPlugin({
+    //   terserOptions: {
+    //     compress: true,
+    //   },
+    // })],
   },
   resolve: {
     extensions: ['.wasm', '.ts', '.js', '.json'],

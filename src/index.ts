@@ -1,5 +1,6 @@
 import { ModuleA } from './ModuleA';
 import type { Dynamic } from './dynamic';
+import { clone } from './utils';
 
 class Module {
     private test: string;
@@ -20,9 +21,10 @@ class Module {
         console.log('init done');
     }
 
-    log() {
+    log(params?: any) {
+        const newParams = clone(params);
         // 给代码加点注释吧
-        console.log(this.test + '111');
+        console.log(this.test + newParams.name);
         console.log(this.longlonglonglonglonglonglongVar + '111');
     }
 

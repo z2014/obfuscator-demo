@@ -1,3 +1,4 @@
+import { clone } from './utils';
 export class ModuleA {
     public name = 'ModuleA';
     private desc = 'this is ModuleA';
@@ -7,6 +8,10 @@ export class ModuleA {
     }
 
     private output() {
-        console.log(this.desc);
+        const test = {
+            desc: this.desc,
+        };
+        const params = clone(test);
+        console.log(params);
     }
 }
